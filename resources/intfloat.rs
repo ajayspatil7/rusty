@@ -1,4 +1,5 @@
 fn main(){
+    
     // BIG ASS NUMBERS: Basically int ~ i types (int16, int32, int64) -> (i16, i32, i64)
     // Most common is i32 for any number which is not SO huge. 
     // Same for float: (float16, float32, float64) -> (f16, f32, f64)
@@ -22,19 +23,38 @@ fn main(){
     let _smallunsignedint: u16 = 65535;
 
     // FLOATS are a bit different story,
+    // in rust, floats are always SIGNED which means they can represent both +ve and -ve values
     // float is generally made of 2 components : (Mantissa and exponent) even sign is included in some cases
     // mantisa generally represents the precision of a number : higher the mantisa higher the precision
     // the value of PI = 3.14 is precise but more precise would be 3.1428571429
+    
     // In rust there are primarily 2 types of float :fp32 and :fp64
     // :fp32 is a single precision float
     // :fp64 is a double precision float 
+    // Run yourself and see the surprising results!
 
+    let typeonefloatmin: f32 = f32::MIN;
+    let typeonefloatmax: f32 = f32::MAX;
 
+    let typetwofloatmin: f64 = f64::MIN;
+    let typetwofloatmax: f64 = f64::MAX;
 
+    println!("Max f32: {}", typeonefloatmin);
+    println!("Min f32: {}", typeonefloatmax);
+
+    println!("Max f64: {}", typetwofloatmin);
+    println!("Min f64: {}", typetwofloatmax);
 
     // CONSTANTS
     // Value and Type can never be changed. I MEAN NEVER!
     // Naming convention : const ALL_CAPS!
-    const _PI = 3.14;
+    const _PI: f32 = 3.14;
+
+    // Constants can't be redeclared with a new value just like variables it's strictly a constant
+    const _ONE: i8 = 1;
+    const _TWOHUNDREAD: i16 = 200;
+    const _SECONDS_IN_MIN: i8 = 60; 
+
+    // Let's end it here! We'll dig more later on if necessary
     
 }
