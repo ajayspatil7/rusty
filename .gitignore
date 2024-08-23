@@ -1,5 +1,3 @@
 /target
 .DS_Store
-fib
-fib.c
 .vscode/extensions.json
